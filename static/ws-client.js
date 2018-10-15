@@ -24,8 +24,7 @@ $(function() {
 
 	 $('#picker')
 	 .farbtastic(function(c) {
-		//alert(c); 
-		//console.log(c);
+		$("#color").val(c);
 		var data = {'cmd':'led', 'data':c};
 		ws.send(JSON.stringify(data));
 	 })
